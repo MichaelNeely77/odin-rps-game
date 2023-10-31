@@ -17,6 +17,16 @@ function getComputerChoice(min, max) {
 }
 console.log(getComputerChoice(1,4));
 
+// Use prompt() to get input from user
+function getPlayerChoice() {
+    let playerSelection = prompt('Play the game');
+    return playerSelection;
+}
+
+console.log(getPlayerChoice());
+
+
+
 
 
 // Write a function that plays a single round of "Rock, Paper, Scissors".
@@ -36,5 +46,5 @@ console.log(getComputerChoice(1,4));
 
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
-// Use prompt() to get input from user
+
 
