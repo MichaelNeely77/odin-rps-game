@@ -5,25 +5,33 @@ function getComputerChoice(min, max) {
   let result = Math.floor(Math.random() * (max - min) + min);
 
   if (result === 1) {
-      console.log('Rock');
+      return 'Rock';
   } else if (result === 2) {
-      console.log('Paper');
+      return 'Paper';
   } else {
-      console.log('Scissors');
+      return 'Scissors';
   }
 
-    // console.log(result);
+
 
 }
-console.log(getComputerChoice(1,4));
+const computerSelection = getComputerChoice(1,4);
+// console.log(computerSelection);
 
 // Use prompt() to get input from user
-function getPlayerChoice() {
-    let playerSelection = prompt('Play the game');
-    return playerSelection;
+
+ function getPlayerChoice() {
+     let playerPromptSelection = prompt('Play the game');
+    if (playerPromptSelection === 'rock' || 'paper' || 'scissors') {
+        return playerPromptSelection;
+    } else {
+        return 'Please select rock, paper, or scissors';
+    }
 }
 
-console.log(getPlayerChoice());
+const playerSelection = getPlayerChoice();
+ console.log(playerSelection);
+
 
 
 
