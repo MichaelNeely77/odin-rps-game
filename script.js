@@ -48,9 +48,10 @@ const playerSelection = getPlayerChoice();
 //And then return a string that declares the winner of the round like so: "You Lose! Paper Beats Rock"
 // String will probably use template literals
 
-// function playRound(playerSelection, computerSelection) {
-//
-// }
+function playRound(playerSelection, computerSelection) {
+
+}
+console.log(playRound());
 //
 // const playerSelection = "rock";
 // const computerSelection = getComputerChoice();
