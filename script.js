@@ -5,11 +5,11 @@ function getComputerChoice(min, max) {
   let result = Math.floor(Math.random() * (max - min) + min);
 
   if (result === 1) {
-      return 'Rock';
+      return 'rock';
   } else if (result === 2) {
-      return 'Paper';
+      return 'paper';
   } else {
-      return 'Scissors';
+      return 'scissors';
   }
 
 
@@ -22,8 +22,12 @@ const computerSelection = getComputerChoice(1,4);
 
  function getPlayerChoice() {
      let playerPromptSelection = prompt('Play the game');
-    if (playerPromptSelection === 'rock' || 'paper' || 'scissors') {
-        return playerPromptSelection;
+    if (playerPromptSelection.toLowerCase() === 'rock') {
+        return 'rock';
+    } else if (playerPromptSelection.toLowerCase() === 'scissors') {
+        return 'scissors';
+    } else if (playerPromptSelection.toLowerCase() === 'paper') {
+        return 'paper';
     } else {
         return 'Please select rock, paper, or scissors';
     }
