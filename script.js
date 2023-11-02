@@ -50,9 +50,15 @@ console.log(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection) {
-        console.log('Tie');
-    } else {
-        console.log('Play again');
+        console.log('Tie! Play again!');
+    } else if (
+        playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
+        console.log(`Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`);
+    } else if (playerSelection !== 'rock' || 'paper' || 'scissors') {
+        console.log('This is Rock, Paper, Scissors dumbass!')
+    }
+    else {
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
     }
 
 }
