@@ -11,12 +11,11 @@ function getComputerChoice(min, max) {
   } else {
       return 'scissors';
   }
-
-
-
 }
-const computerSelection = getComputerChoice(1,4);
-// console.log(computerSelection);
+
+const computerSelection =getComputerChoice(1,4)
+console.log(getComputerChoice(1,4));
+
 
 // Use prompt() to get input from user
 
@@ -32,9 +31,10 @@ const computerSelection = getComputerChoice(1,4);
         return 'Please select rock, paper, or scissors';
     }
 }
-
 const playerSelection = getPlayerChoice();
- console.log(playerSelection);
+console.log(getPlayerChoice());
+
+
 
 
 
@@ -50,8 +50,9 @@ const playerSelection = getPlayerChoice();
 
 function playRound(playerSelection, computerSelection) {
 
+
 }
-console.log(playRound());
+console.log(playRound(playerSelection, computerSelection));
 //
 // const playerSelection = "rock";
 // const computerSelection = getComputerChoice();
