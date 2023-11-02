@@ -14,7 +14,7 @@ function getComputerChoice(min, max) {
 }
 
 const computerSelection =getComputerChoice(1,4)
-console.log(getComputerChoice(1,4));
+console.log(computerSelection);
 
 
 // Use prompt() to get input from user
@@ -32,7 +32,7 @@ console.log(getComputerChoice(1,4));
     }
 }
 const playerSelection = getPlayerChoice();
-console.log(getPlayerChoice());
+console.log(playerSelection);
 
 
 
@@ -49,14 +49,15 @@ console.log(getPlayerChoice());
 // String will probably use template literals
 
 function playRound(playerSelection, computerSelection) {
-
+    if(playerSelection === computerSelection) {
+        console.log('Tie');
+    } else {
+        console.log('Play again');
+    }
 
 }
-console.log(playRound(playerSelection, computerSelection));
-//
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+playRound(playerSelection, computerSelection);
+
 
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
