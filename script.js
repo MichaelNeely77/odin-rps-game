@@ -65,6 +65,10 @@
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let rounds = 0;
+
     function getComputerChoice(min, max) {
         let result = Math.floor(Math.random() * (max - min) + min);
 
@@ -96,17 +100,16 @@ function game() {
     console.log(playerSelection);
 
     function playRound(playerSelection, computerSelection) {
-        let playerScore;
-        let computerScore;
+
         if(playerSelection === computerSelection) {
             console.log('Tie! Play again!');
         } else if (
             playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
             console.log(`Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`);
-            console.log(playerScore = +1);
+            return playerScore++;
         } else {
             console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
-            console.log(computerScore = +1);
+            return computerScore++;
         }
 
     }
@@ -115,8 +118,10 @@ function game() {
     // Add score count for player win, computer win or tie
     // Record player score
     // Record computer score
-    // Keep track of rounds up to 5 and declare a winner
-
+    // Max number of rounds is five
+    // Declares a winner at the end
+    console.log(computerScore);
+    console.log(playerScore);
 }
 game();
 
