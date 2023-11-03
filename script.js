@@ -34,13 +34,6 @@ console.log(computerSelection);
 const playerSelection = getPlayerChoice();
 console.log(playerSelection);
 
-
-
-
-
-
-
-
 // Write a function that plays a single round of "Rock, Paper, Scissors".
 
 
@@ -54,7 +47,9 @@ function playRound(playerSelection, computerSelection) {
     } else if (
         playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
         console.log(`Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`);
-    } else if (playerSelection !== 'rock' || 'paper' || 'scissors') {
+    } else if (playerSelection !== 'rock' ||
+        playerSelection !== 'paper' ||
+        playerSelection !== 'scissors') {
         console.log('This is Rock, Paper, Scissors dumbass!')
     }
     else {
@@ -63,9 +58,14 @@ function playRound(playerSelection, computerSelection) {
 
 }
 playRound(playerSelection, computerSelection);
+// console.log(gameResults);
 
 
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
+
+function game() {
+
+}
 
 
