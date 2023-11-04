@@ -1,3 +1,15 @@
 h1 {
     text-align:center;
 }
+
+.play-button {
+    display:flex;
+    justify-content:center;
+}
+
+button {
+    color: #fff;
+    background-color: navy;
+    padding: 10px 20px;
+    font-size: 20px;
+}
