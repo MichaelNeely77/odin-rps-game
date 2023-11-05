@@ -75,6 +75,7 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
     let rounds = 1;
+
     for (let i = 0; i < 5; i++) {
 
 
@@ -128,13 +129,23 @@ function game() {
                 return computerScore++;
             }
 
+
         }
 
         playRound(playerSelection, computerSelection);
         console.log('Computer score = ' + computerScore);
         console.log('Player score = ' + playerScore);
-        console.log('Rounds = '+ rounds++);
+        console.log('Rounds = ' + rounds++);
 
+        if (rounds > 5) {
+            if (computerScore > playerScore) {
+                console.log('Game is over. Computer wins!');
+            } else if (playerScore > computerScore) {
+                console.log('Game is over. Player wins!');
+            } else {
+                console.log('Game is over. Game is a tie');
+            }
+        }
     }
 
 }
