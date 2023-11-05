@@ -1,8 +1,3 @@
-// document.querySelector("button").addEventListener("click", () => {
-//     let playerInput = prompt("Play this game");
-//     alert(playerInput);
-// });
-
 // Begin with function called getComputerChoice
 // Function will randomly return either 'Rock', 'Paper', or 'Scissors'.
 
@@ -97,10 +92,13 @@ function game() {
     console.log("Computer Selection is " + computerSelection);
 
 
-
+document.querySelector("button").addEventListener("click", () => {
+    let playerInput = prompt("Play this game");
+    console.log(playerInput);
+});
 
     function getPlayerChoice() {
-        let playerPromptSelection = prompt("Play the Game");
+        // let playerPromptSelection = prompt("Play the Game");
         if (playerPromptSelection === 'rock') {
             return 'rock';
         } else if (playerPromptSelection === 'scissors') {
