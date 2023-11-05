@@ -1,3 +1,8 @@
+// document.querySelector("button").addEventListener("click", () => {
+//     let playerInput = prompt("Play this game");
+//     alert(playerInput);
+// });
+
 // Begin with function called getComputerChoice
 // Function will randomly return either 'Rock', 'Paper', or 'Scissors'.
 
@@ -89,10 +94,13 @@ function game() {
     }
 
     const computerSelection =getComputerChoice(1,4)
-    console.log(computerSelection);
+    console.log("Computer Selection is " + computerSelection);
+
+
+
 
     function getPlayerChoice() {
-        let playerPromptSelection = prompt('Play the game');
+        let playerPromptSelection = prompt("Play the Game");
         if (playerPromptSelection === 'rock') {
             return 'rock';
         } else if (playerPromptSelection === 'scissors') {
@@ -104,7 +112,7 @@ function game() {
         }
     }
     const playerSelection = getPlayerChoice();
-    console.log(playerSelection);
+    console.log("Player Selection is " + playerSelection);
 
     function playRound(playerSelection, computerSelection) {
 
@@ -118,11 +126,6 @@ function game() {
             console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
             return computerScore++;
         }
-
-    }
-
-    function gameOver() {
-
 
     }
     playRound(playerSelection, computerSelection);
