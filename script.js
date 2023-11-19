@@ -64,6 +64,8 @@
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
+selectRock = document.querySelector('.select_rock');
+
 function game() {
 
     // Add score count for player win, computer win or tie
