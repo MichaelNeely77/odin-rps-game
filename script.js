@@ -65,6 +65,8 @@
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
 selectRock = document.querySelector('.select_rock');
+selectPaper = document.querySelector('.select_paper');
+selectScissors = document.querySelector('.select_scissors');
 
 function game() {
 
@@ -102,14 +104,26 @@ function game() {
 // });
 
         function getPlayerChoice() {
-            let playerInput = prompt("Play this game");
-            console.log(playerInput);
-            if (playerInput === 'rock') {
+            let playerSelectRock =  selectRock.addEventListener('click', () => {
+                console.log("Rock");
                 return 'rock';
-            } else if (playerInput === 'scissors') {
-                return 'scissors';
-            } else if (playerInput === 'paper') {
+            });
+            let playerSelectPaper =  selectPaper.addEventListener('click', () => {
+                console.log("Paper");
                 return 'paper';
+            });
+            let playerSelectScissors =  selectScissors.addEventListener('click', () => {
+                console.log("Scissors");
+                return 'scissors';
+            });
+
+            if (playerSelectRock = 'rock') {
+
+
+            } else if (playerSelectScissors) {
+
+            } else if (playerSelectPaper) {
+
             } else {
                 return 'Please select rock, paper, or scissors';
             }
