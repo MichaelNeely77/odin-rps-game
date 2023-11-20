@@ -64,9 +64,7 @@
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
-selectRock = document.querySelector('.select_rock');
-selectPaper = document.querySelector('.select_paper');
-selectScissors = document.querySelector('.select_scissors');
+
 
 function game() {
 
@@ -103,33 +101,26 @@ function game() {
 //
 // });
 
-        function getPlayerChoice() {
-            let playerSelectRock =  selectRock.addEventListener('click', () => {
-                console.log("Rock");
-                return 'rock';
+
+
+
+     function getPlayerChoice() {
+        const selectRock = document.querySelector('.select_rock');
+        const selectPaper = document.querySelector('.select_paper');
+        const selectScissors = document.querySelector('.select_scissors');
+        const playerSelects = [selectRock, selectPaper, selectScissors];
+
+         playerSelects.forEach((choice) => {
+             choice.addEventListener('click', () => {
+                 return choice.value;
             });
-            let playerSelectPaper =  selectPaper.addEventListener('click', () => {
-                console.log("Paper");
-                return 'paper';
-            });
-            let playerSelectScissors =  selectScissors.addEventListener('click', () => {
-                console.log("Scissors");
-                return 'scissors';
-            });
 
-            if (playerSelectRock = 'rock') {
+        });
+        
 
-
-            } else if (playerSelectScissors) {
-
-            } else if (playerSelectPaper) {
-
-            } else {
-                return 'Please select rock, paper, or scissors';
-            }
         }
 
-        const playerSelection = getPlayerChoice();
+     const playerSelection = getPlayerChoice();
         console.log("Player Selection is " + playerSelection);
 
         function playRound(playerSelection, computerSelection) {
