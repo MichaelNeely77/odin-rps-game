@@ -66,6 +66,7 @@
 
 
 
+
 function game() {
 
     // Add score count for player win, computer win or tie
@@ -104,21 +105,13 @@ function game() {
 
 
 
-     function getPlayerChoice() {
-        const selectRock = document.querySelector('.select_rock');
-        const selectPaper = document.querySelector('.select_paper');
-        const selectScissors = document.querySelector('.select_scissors');
-        const playerSelects = [selectRock, selectPaper, selectScissors];
+     function getPlayerChoice(event) {
 
-         playerSelects.forEach((choice) => {
-             choice.addEventListener('click', () => {
-                 return choice.value;
-            });
 
-        });
-        
 
-        }
+    }
+
+
 
      const playerSelection = getPlayerChoice();
         console.log("Player Selection is " + playerSelection);
