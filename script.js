@@ -64,6 +64,10 @@
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
+const rockBtn = document.querySelector('.select_rock');
+const paperBtn = document.querySelector('.select_paper');
+const scissorsBtn = document.querySelector('.select_scissors');
+
 
 
 
@@ -98,23 +102,21 @@ function game() {
         console.log("Computer Selection is " + computerSelection);
 
 
-// document.querySelector("button").addEventListener("click", () => {
-//
-// });
+    rockBtn.addEventListener('click', () => {
+        let playerSelection = 'rock';
+        playRound(playerSelection, computerSelection);
+    });
+    paperBtn.addEventListener('click', () => {
+        let playerSelection = 'paper';
+        playRound(playerSelection, computerSelection);
+    });
+    scissorsBtn.addEventListener('click', () => {
+        let playerSelection = 'scissors';
+        playRound(playerSelection, computerSelection);
+    });
 
 
 
-
-     function getPlayerChoice(event) {
-
-
-
-    }
-
-
-
-     const playerSelection = getPlayerChoice();
-        console.log("Player Selection is " + playerSelection);
 
         function playRound(playerSelection, computerSelection) {
 
@@ -128,14 +130,14 @@ function game() {
                 console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
                 return computerScore++;
             }
-
+            console.log('Computer score = ' + computerScore);
+            console.log('Player score = ' + playerScore);
+            console.log('Rounds = ' + rounds++);
 
         }
 
-        playRound(playerSelection, computerSelection);
-        console.log('Computer score = ' + computerScore);
-        console.log('Player score = ' + playerScore);
-        console.log('Rounds = ' + rounds++);
+        // playRound(playerSelection, computerSelection);
+
 
         // if (rounds > 5) {
         //     if (computerScore > playerScore) {
