@@ -64,9 +64,7 @@
 // Write a new function called game().
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
-const rockBtn = document.querySelector('.select_rock');
-const paperBtn = document.querySelector('.select_paper');
-const scissorsBtn = document.querySelector('.select_scissors');
+
 
 
 
@@ -78,7 +76,9 @@ function game() {
     // Record computer score
     // Max number of rounds is five
     // Declares a winner at the end
-
+    const rockBtn = document.querySelector('.select_rock');
+    const paperBtn = document.querySelector('.select_paper');
+    const scissorsBtn = document.querySelector('.select_scissors');
     let playerScore = 0;
     let computerScore = 0;
     let rounds = 1;
@@ -98,20 +98,23 @@ function game() {
             }
         }
 
-        const computerSelection = getComputerChoice(1, 4)
-        console.log("Computer Selection is " + computerSelection);
+
+
 
 
     rockBtn.addEventListener('click', () => {
         let playerSelection = 'rock';
+        let computerSelection = getComputerChoice(1, 4);
         playRound(playerSelection, computerSelection);
     });
     paperBtn.addEventListener('click', () => {
         let playerSelection = 'paper';
+        let computerSelection = getComputerChoice(1, 4);
         playRound(playerSelection, computerSelection);
     });
     scissorsBtn.addEventListener('click', () => {
         let playerSelection = 'scissors';
+        let computerSelection = getComputerChoice(1, 4);
         playRound(playerSelection, computerSelection);
     });
 
@@ -119,24 +122,29 @@ function game() {
 
 
         function playRound(playerSelection, computerSelection) {
+            document.getElementById('round-result').innerHTML ="Computer Selection is " + computerSelection;
 
+            console.log("Computer Selection is " + computerSelection);
             if (playerSelection === computerSelection) {
+                document.getElementById('game-result').innerHTML = "Tie! Play again!";
                 console.log('Tie! Play again!');
             } else if (
                 playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
+                document.getElementById('game-result').innerHTML = `Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`;
                 console.log(`Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`);
                 return playerScore++;
             } else {
+                document.getElementById('game-result').innerHTML = `You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`;
                 console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
                 return computerScore++;
             }
             console.log('Computer score = ' + computerScore);
             console.log('Player score = ' + playerScore);
-            console.log('Rounds = ' + rounds++);
+
 
         }
 
-        // playRound(playerSelection, computerSelection);
+
 
 
         // if (rounds > 5) {
@@ -149,7 +157,7 @@ function game() {
         //     }
         // }
     // }
-
+    console.log('Rounds = ' + rounds++);
 }
 game();
 
