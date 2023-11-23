@@ -65,7 +65,12 @@
 //Add the previous code inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
 
 
-
+const rockBtn = document.querySelector('.select_rock');
+const paperBtn = document.querySelector('.select_paper');
+const scissorsBtn = document.querySelector('.select_scissors');
+let playerScore = 0;
+let computerScore = 0;
+let rounds = 1;
 
 
 
@@ -76,12 +81,7 @@ function game() {
     // Record computer score
     // Max number of rounds is five
     // Declares a winner at the end
-    const rockBtn = document.querySelector('.select_rock');
-    const paperBtn = document.querySelector('.select_paper');
-    const scissorsBtn = document.querySelector('.select_scissors');
-    let playerScore = 0;
-    let computerScore = 0;
-    let rounds = 1;
+
 
     // for (let i = 0; i < 5; i++) {
 
@@ -122,6 +122,7 @@ function game() {
 
 
         function playRound(playerSelection, computerSelection) {
+
             document.getElementById('round-result').innerHTML ="Computer Selection is " + computerSelection;
 
             console.log("Computer Selection is " + computerSelection);
@@ -132,22 +133,26 @@ function game() {
                 playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper') {
                 document.getElementById('game-result').innerHTML = `Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`;
                 console.log(`Computer loses! ${playerSelection} beats ${computerSelection}! Player wins!`);
-                return playerScore++;
+                playerScore++;
             } else {
                 document.getElementById('game-result').innerHTML = `You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`;
                 console.log(`You lose! ${computerSelection} beats ${playerSelection}! Computer wins!`);
-                return computerScore++;
+                computerScore++;
+
             }
-            console.log('Computer score = ' + computerScore);
-            console.log('Player score = ' + playerScore);
 
 
+            document.getElementById('player-score').innerHTML = `${playerScore}`;
+            document.getElementById('computer-score').innerHTML = `${computerScore}`;
+            document.getElementById('round-display').innerHTML = `${rounds}`;
+            console.log('Rounds = ' + rounds++);
         }
 
 
+    console.log('Player score = ' + playerScore);
 
 
-        // if (rounds > 5) {
+        // if (rounds = 5) {
         //     if (computerScore > playerScore) {
         //         console.log('Game is over. Computer wins!');
         //     } else if (playerScore > computerScore) {
@@ -156,9 +161,9 @@ function game() {
         //         console.log('Game is over. Game is a tie');
         //     }
         // }
-    // }
-    console.log('Rounds = ' + rounds++);
-}
+    }
+
+
 game();
 
 
