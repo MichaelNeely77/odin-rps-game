@@ -83,8 +83,6 @@ function game() {
     // Declares a winner at the end
 
 
-    // for (let i = 0; i < 5; i++) {
-
 
         function getComputerChoice(min, max) {
             let result = Math.floor(Math.random() * (max - min) + min);
@@ -146,7 +144,8 @@ function game() {
             document.getElementById('computer-score').innerHTML = `${computerScore}`;
             document.getElementById('round-display').innerHTML = `${rounds}`;
             console.log('Rounds = ' + rounds++);
-            if (rounds === 5) {
+
+            if (rounds == 6) {
                 if (playerScore > computerScore) {
                     document.getElementById('winner-result').innerHTML = "Game Over. Player wins!"
                     } else if (computerScore > playerScore) {
