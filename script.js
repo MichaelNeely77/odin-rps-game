@@ -146,10 +146,21 @@ function game() {
             document.getElementById('computer-score').innerHTML = `${computerScore}`;
             document.getElementById('round-display').innerHTML = `${rounds}`;
             console.log('Rounds = ' + rounds++);
-        }
+            if (rounds === 5) {
+                if (playerScore > computerScore) {
+                    document.getElementById('winner-result').innerHTML = "Game Over. Player wins!"
+                    } else if (computerScore > playerScore) {
+                    document.getElementById('winner-result').innerHTML = "Game Over. Computer wins!"
+                    } else {
+                    document.getElementById('winner-result').innerHTML = "Game over, Tie Game."
+                    }
+                }
+            }
+
 
 
     console.log('Player score = ' + playerScore);
+
 
 
         // if (rounds = 5) {
