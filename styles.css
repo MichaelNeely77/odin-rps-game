@@ -28,6 +28,7 @@ button {
 .round {
     border: 1px solid #ccc;
     width: 25%;
+    text-align: center;
 }
 
 .scores {
