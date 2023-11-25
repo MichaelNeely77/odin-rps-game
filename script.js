@@ -142,8 +142,8 @@ function game() {
 
             document.getElementById('player-score').innerHTML = `${playerScore}`;
             document.getElementById('computer-score').innerHTML = `${computerScore}`;
-            document.getElementById('round-display').innerHTML = `${rounds}`;
-            console.log('Rounds = ' + rounds++);
+            document.getElementById('round-display').innerHTML = `${rounds++}`;
+
 
             if (rounds == 6) {
                 if (playerScore > computerScore) {

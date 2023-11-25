@@ -1,9 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,700&display=swap');
+
+
 body {
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content: space-between;
-
+    font-family: 'Raleway', sans-serif;
 }
 
 body > div {
@@ -45,4 +49,8 @@ button {
     padding: 10px;
     border: 1px solid #ccc;
     text-align:center;
+}
+
+#winner-result {
+    font-size: 30px;
 }
